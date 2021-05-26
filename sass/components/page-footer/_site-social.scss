@@ -1,0 +1,40 @@
+.site-social__text {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: map-get($color, 'bg-primal');
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.site-social__list {
+  display: flex;
+}
+
+.site-social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.site-social__link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  color: map-get($color, 'bg-primal');
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: map-get($color, 'accent');
+  }
+}
+
+.site-social__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,33 @@
+.clients-list {
+  display: flex;
+}
+
+.clients-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list__link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  color: map-get($color, 'primary-icon');
+  border: 1px solid map-get($color, 'primary-icon');
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  @include transition(color);
+  @include transition(border-color);
+
+  &:hover,
+  &:focus {
+    color: map-get($color, 'accent');
+    border-color: map-get($color, 'accent');
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

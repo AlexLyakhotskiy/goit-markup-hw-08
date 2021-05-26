@@ -1,0 +1,14 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: map-get($color, 'bg-secondary');
+}
+
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__box:not(:last-child) {
+  margin-right: 70px;
+}

@@ -1,0 +1,14 @@
+body {
+  color: map-get($color, 'primary');
+  background-color: map-get($color, 'bg-primal');
+  font-family: map-get($font, 'primary'), sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,33 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section--without-padding {
+  padding-top: 0;
+}
+
+.section--bg-color {
+  background: #f5f4fa;
+}
+
+.section__title {
+  color: map-get($color, 'title');
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section__title--visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

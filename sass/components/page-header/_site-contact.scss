@@ -1,0 +1,32 @@
+.site-contact {
+  display: flex;
+  margin-left: auto;
+}
+
+.site-contact__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.site-contact__link {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($color, 'accent');
+  }
+}
+
+.site-contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

@@ -1,0 +1,214 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  @include transition(opacity);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 581px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: map-get($color, 'bg-primal');
+
+  @include transition(transform);
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.main-form__text {
+  margin-bottom: 12px;
+
+  color: map-get($color, 'title');
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.main-form__field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.main-form__input {
+  margin-top: 4px;
+  padding: 12px;
+  padding-left: 42px;
+  width: 448px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  @include transition(border-color);
+
+  .main-form__field:focus-within & {
+    border-color: map-get($color, 'accent');
+  }
+}
+
+.main-form__icon {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+  fill: var(--title-text-color);
+
+  .main-form__field:focus-within & {
+    fill: map-get($color, 'accent');
+  }
+}
+
+.main-form__field--bigger-margin {
+  margin-bottom: 20px;
+}
+
+.main-form__comment {
+  margin-top: 4px;
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+
+  @include transition(border-color);
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  .main-form__field:focus-within & {
+    border-color: map-get($color, 'accent');
+  }
+}
+
+.main-form__checkbox-field {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-form__checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-form__checkbox-border {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid map-get($color, 'title');
+  background-color: map-get($color, 'bg-primal');
+
+  .main-form__checkbox-input:checked + & {
+    border-color: map-get($color, 'accent');
+    background-color: map-get($color, 'accent');
+  }
+}
+
+.main-form__checkbox-text,
+.main-form__contract-link {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.main-form__checkbox-text {
+  margin-right: 3px;
+}
+
+.main-form__contract-link {
+  color: map-get($color, 'accent');
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($color, 'button');
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: #000000;
+  background-color: map-get($color, 'bg-primal');
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($color, 'accent');
+  }
+}
+
+.close-button__icon {
+  fill: currentColor;
+}
