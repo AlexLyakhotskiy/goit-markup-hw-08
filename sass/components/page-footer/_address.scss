@@ -8,6 +8,12 @@
   line-height: 1.71;
 }
 
+@media screen and (max-width: 1199px) {
+  .address {
+    margin-bottom: 60px;
+  }
+}
+
 .address__text {
   @extend %address-text-link;
   color: map-get($color, 'bg-primal');

@@ -1,5 +1,5 @@
 .site-social__text {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
 
   color: map-get($color, 'bg-primal');
@@ -9,8 +9,14 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .site-social {
+    margin-bottom: 60px;
+  }
+}
+
 .site-social__list {
-  display: flex;
+  display: inline-flex;
 }
 
 .site-social__item:not(:last-child) {

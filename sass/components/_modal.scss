@@ -4,10 +4,12 @@
   left: 0;
   opacity: 1;
 
+  padding: 93px 15px;
   width: 100%;
   height: 100%;
 
   background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 
   @include transition(opacity);
 }
@@ -22,28 +24,38 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-
-  width: 528px;
-  height: 581px;
+  position: relative;
+  width: 100%;
+  padding: 40px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: map-get($color, 'bg-primal');
 
-  @include transition(transform);
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 450px;
+    height: 609px;
+
+    @include transition(transform);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .main-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 40px;
+  width: 100%;
 }
 
 .main-form__text {
@@ -61,6 +73,7 @@
   position: relative;
 
   margin-bottom: 10px;
+  width: 100%;
 
   font-size: 12px;
   line-height: 1.17;
@@ -71,7 +84,7 @@
   margin-top: 4px;
   padding: 12px;
   padding-left: 42px;
-  width: 448px;
+  width: 100%;
   height: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -103,7 +116,7 @@
 .main-form__comment {
   margin-top: 4px;
   padding: 12px 16px;
-  width: 448px;
+  width: 100%;
   height: 120px;
 
   font-size: 12px;
@@ -147,7 +160,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 4px;
 
   width: 16px;
   height: 15px;
@@ -159,16 +172,19 @@
     border-color: map-get($color, 'accent');
     background-color: map-get($color, 'accent');
   }
+  @media screen and (min-width: 1200px) {
+    margin-right: 8px;
+  }
 }
 
 .main-form__checkbox-text,
 .main-form__contract-link {
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.main-form__checkbox-text {
-  margin-right: 3px;
+  font-size: 12px;
+  line-height: 1.17;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .main-form__contract-link {

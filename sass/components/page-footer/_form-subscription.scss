@@ -1,17 +1,26 @@
-.form-subscription {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  align-items: flex-end;
+@media screen and (min-width: 1200px) {
+  .form-subscription {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: flex-end;
+  }
 }
 
 .form-subscription__field {
-  display: flex;
-  flex-direction: column;
-  margin-right: 12px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+  }
 }
 
 .form-subscription__text {
+  display: block;
   margin-bottom: 20px;
 
   font-size: 14px;
@@ -23,7 +32,7 @@
 
 .form-subscription__input {
   padding: 15px;
-  width: 358px;
+  width: 100%;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -37,5 +46,13 @@
 
   .form-subscription__field:focus-within & {
     border-color: map-get($color, 'accent');
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }

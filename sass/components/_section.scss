@@ -1,6 +1,11 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section--without-padding {
@@ -11,14 +16,25 @@
   background: #f5f4fa;
 }
 
-.section__title {
-  color: map-get($color, 'title');
+.section--hidden {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
 
-  font-size: 36px;
+.section__title {
+  margin-bottom: 30px;
+
+  color: map-get($color, 'title');
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 
-  margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .section__title--visually-hidden {
