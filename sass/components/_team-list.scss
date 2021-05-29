@@ -6,10 +6,6 @@
   }
 }
 
-// .team-list__item:not(:last-child) {
-//   margin-right: 30px;
-// }
-
 .team-list__item {
   max-width: 100%;
 
@@ -36,12 +32,13 @@
 }
 
 .team-list__footer {
-  padding: 30px 32px;
+  padding: 30px 15px;
   text-align: center;
 }
 
 .team-list__img {
   display: block;
+  width: 100%;
 }
 
 .team-list__title {
@@ -63,6 +60,7 @@
 
 .team-list__socials {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .team-list__socials-item:not(:last-child) {

@@ -5,15 +5,10 @@
 }
 
 .page-header__container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-// .page-header__nav {
-//   display: flex;
-// }
 
 .menu-button {
   position: absolute;
@@ -56,7 +51,6 @@
 }
 
 .menu-container {
-  background-color: palegoldenrod;
   background-color: map-get($color, 'bg-primal');
 
   @media screen and (max-width: 767px) {
