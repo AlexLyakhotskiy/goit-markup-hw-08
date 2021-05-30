@@ -11,11 +11,6 @@
 }
 
 .menu-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  z-index: 2;
-
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -34,27 +29,22 @@
   }
 }
 
+.menu-button--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
 .menu-button__icon {
   fill: currentColor;
-}
-
-.menu-button .menu-button__icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .menu-button__icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .menu-button__icon-menu {
-  display: none;
 }
 
 .menu-container {
   background-color: map-get($color, 'bg-primal');
 
   @media screen and (max-width: 767px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
@@ -62,10 +52,11 @@
     height: 800px;
     padding: 48px 40px;
     z-index: 1;
+    transform: translate(-100%);
+    @include transition(transform);
 
     &.is-open {
-      display: flex;
-      flex-direction: column;
+      transform: translate(0);
     }
   }
 

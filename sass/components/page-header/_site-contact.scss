@@ -93,6 +93,11 @@
       background: rgba(33, 33, 33, 0.2);
     }
   }
+  @media screen and (max-width: 430px) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .main-social__link {
