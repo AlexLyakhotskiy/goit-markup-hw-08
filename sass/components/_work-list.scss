@@ -1,9 +1,12 @@
 .work-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.work-list__item:not(:last-child) {
-  margin-right: 30px;
+.work-list__item {
+  width: calc((100% - 90px) / 3);
+  margin: 15px;
 }
 
 .work-list__img {
