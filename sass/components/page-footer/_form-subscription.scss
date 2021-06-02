@@ -4,10 +4,12 @@
     flex-direction: row;
     margin-left: auto;
     align-items: flex-end;
+    width: 100%;
   }
 }
 
 .form-subscription__field {
+  flex-grow: 1;
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
@@ -48,11 +50,7 @@
     border-color: map-get($color, 'accent');
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 358px;
   }
 }

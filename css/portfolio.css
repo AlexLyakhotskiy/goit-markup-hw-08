@@ -719,7 +719,7 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .page-footer__container {
+  .page-footer__wrapper-shell {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -730,18 +730,60 @@ body.modal-open {
 }
 
 @media screen and (max-width: 1199px) {
-  .page-footer__container {
+  .page-footer__wrapper-shell {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     text-align: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .page-footer__wrapper-shell {
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__shell {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page-footer__shell:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__shell {
+    width: calc((100% - 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__wrapper-box {
+    margin: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .page-footer__box:not(:last-child) {
-    margin-right: 70px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__box {
+    width: calc((100% - 30px) / 2);
+    margin: 15px;
   }
 }
 
@@ -753,12 +795,6 @@ body.modal-open {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-}
-
-@media screen and (max-width: 1199px) {
-  .address {
-    margin-bottom: 60px;
-  }
 }
 
 .address__text {
@@ -784,12 +820,6 @@ body.modal-open {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 767px) {
-  .site-social {
-    margin-bottom: 60px;
-  }
 }
 
 .site-social__list {
@@ -842,7 +872,14 @@ body.modal-open {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    width: 100%;
   }
+}
+
+.form-subscription__field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media screen and (max-width: 1199px) {
@@ -892,15 +929,9 @@ body.modal-open {
   border-color: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form-subscription__input {
     width: 450px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .form-subscription__input {
-    width: 358px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

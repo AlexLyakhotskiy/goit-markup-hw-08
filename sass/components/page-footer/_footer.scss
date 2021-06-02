@@ -4,20 +4,51 @@
   background-color: map-get($color, 'bg-secondary');
 }
 
-.page-footer__container {
+.page-footer__wrapper-shell {
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
   }
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
-    justify-content: space-around;
     text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: -15px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .page-footer__box:not(:last-child) {
-    margin-right: 70px;
+.page-footer__shell {
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px) / 2);
+    margin: 15px;
+  }
+}
+
+.page-footer__wrapper-box {
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.page-footer__box {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    margin: 15px;
   }
 }
