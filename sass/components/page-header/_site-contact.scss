@@ -1,8 +1,13 @@
 .site-contact {
+  @media screen and (max-width: 449px) {
+    margin-bottom: 48px;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column-reverse;
     margin-top: auto;
+  }
+  @media screen and (min-width: 450px) and (max-width: 767px) {
     margin-bottom: 64px;
   }
 
@@ -12,7 +17,10 @@
 }
 
 .site-contact__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 449px) {
+    margin-top: 24px;
+  }
+  @media screen and (min-width: 450px) and (max-width: 767px) {
     margin-top: 32px;
   }
   @media screen and (min-width: 1200px) {
@@ -48,12 +56,21 @@
     color: map-get($color, 'accent');
   }
 }
-@media screen and (max-width: 767px) {
-  .site-contact__link--mail {
+
+.site-contact__link--mail {
+  @media screen and (max-width: 449px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 450px) and (max-width: 767px) {
     font-size: 24px;
     line-height: 1.17;
   }
-  .site-contact__link--tell {
+}
+.site-contact__link--tell {
+  @media screen and (max-width: 449px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 450px) and (max-width: 767px) {
     font-size: 34px;
     line-height: 1.18;
   }
@@ -80,22 +97,24 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 14px;
+    @media screen and (min-width: 450px) and (max-width: 767px) {
+      margin-right: 20px;
+    }
     &::before {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translateX(10px);
+      transform: translateX(7px);
 
       content: '';
-      height: 22px;
+      height: 18px;
       width: 2px;
       background: rgba(33, 33, 33, 0.2);
-    }
-  }
-  @media screen and (max-width: 430px) {
-    &:first-child {
-      margin-bottom: 10px;
+      @media screen and (min-width: 450px) and (max-width: 767px) {
+        height: 22px;
+        transform: translateX(10px);
+      }
     }
   }
 }
@@ -104,7 +123,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: map-get($color, 'accent');
@@ -112,5 +131,8 @@
   &:focus,
   &:hover {
     color: map-get($color, 'button');
+  }
+  @media screen and (min-width: 450px) {
+    font-size: 18px;
   }
 }
